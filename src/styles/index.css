@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins;
+}
+* {
+  box-sizing: border-box;
+  line-height: normal;
+  font-family: inherit;
+  margin: unset;
+}
+a {
+  display: block;
+}
+ul {
+  margin: 0;
+  margin-inline: 0 !important;
+  padding: 0;
+  list-style: none;
+}
+.ReactModal__Overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+  background: transparent;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #6b6b6b;
+  border-radius: 10px;
+}
+input {
+  background-color: transparent;
+  width: 100%;
+}
+input:focus {
+  outline: none;
+}
+.gray_50_02_red_A400_border {
+
+  border-image: linear-gradient(135deg, #fafafa, #f90e3a) 1;
+
+  /* Border radius */
+  border-radius: 20px; /* Adjust the value as per your preference */
+}
+.gray_50_02_red_A400_border::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  z-index: -1;
+  background: linear-gradient(135deg, #fafafa, #f90e3a);
+  border-radius: 20px; /* Same border radius as the main element */
+}
+.has-error{
+  border: 1px solid red;
+}
+.is-valid{
+  border: 1px solid #0B90AF;
+}
+.react-tel-input .flag-dropdown {
+  position: absolute;
+  top: 6px;
+  bottom: 0;
+  padding: 5px;
+  background-color: #fbfbfb;
+  border: 1px solid #f4f4f4;
+  height: 71px;
+  margin-left: 2px;
+
+}
+.react-tel-input .selected-flag {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  padding: 5px;
+  background-color: #fbfbfb;
+  border: 1px solid #f4f4f4;
+  border-radius: 19px 0 0 19px;
+}
+.react-tel-input {
+  border-radius: 15px;
+  line-height: 25px;
+  height: 82px;
+  width: 436px;
+}
+.react-tel-input .form-control {
+  border-radius: 15px;
+  line-height: 30px;
+background-color: #F3F3F3 !important;
+  border: 1px solid #0B90AF;
+
+  border-radius: 15px;
+  line-height: 30px;
+  height: 80px;
+  width: 434px;
+}
+/* .head{
+  background-image: url('images/header.webp');
+} */
+.pincode-input-text {
+
+  width: 68px !important;
+  height: 80px !important;
+}
+.pincode-input-container{
+  padding: 0px !important;
+}
+.react-tel-input .flag-dropdown {
+  padding: 10px !important;
+
+  border-radius: 50px 0 0 50px !important;
+}
+.form-control {
+  padding-left: 56px !important;
+}
