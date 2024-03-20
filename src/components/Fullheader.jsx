@@ -26,12 +26,12 @@ const Fullheader = ({ children }) => {
           <div className="mq800:hidden block">
             <img
               src={man_pic}
-              className="h-full rounded-full mt-[10px] mq750:mt-6px w-[50px] h-[50px] mr-10 mq750:mr-0"
+              className=" rounded-full mt-[10px] mq750:mt-6px w-[50px] h-[50px] mr-10 mq750:mr-0"
             />
           </div>
           {/**Hidden part for mobile */}
           <div
-            className="hidden mq800:block mt-4 w-[130px] h-[30px] border border-sky-500 rounded-2xl flex justify-center items-center
+            className="hidden mq800:block mt-4 w-[130px] h-[30px] border border-sky-500 rounded-2xl justify-center items-center
              "
           >
             <p className="text-[11px] text-white-A700">
@@ -56,7 +56,7 @@ const Fullheader = ({ children }) => {
       </div>
       <div className="absolute top-[300px]  mq1125:relative mq1125:top-[-40px]   w-full">
         {children}
-        <div className="w-[70%] py-9 flex flex-row items-center justify-center  py-0 px-5 box-border max-w-full text-11xl text-white">
+        <div className="w-[70%] flex flex-row items-center justify-center  py-0 px-5 box-border max-w-full text-11xl text-white">
           <div className="w-full flex flex-row items-end justify-around gap-[20px] max-w-full mq1050:flex-wrap mq1050:justify-center">
             <div className="rounded-xl cursor-pointer w-[30%] bg-lightgray shadow-[0px_0px_3px_rgba(0,_0,_0,_0.1)] flex flex-row items-start justify-start pt-[23px] px-[77px] pb-[22px] z-[2] mq450:pl-5 mq450:pr-5 mq450:box-border">
               <div className="relative z-[3] mq450:text-lg mq1050:text-3xl text-white-A700">
