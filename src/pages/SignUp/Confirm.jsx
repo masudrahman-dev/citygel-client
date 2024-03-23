@@ -274,26 +274,16 @@ export default function Confirm() {
                 >
                   Enter Your Phone number
                 </Text>
-                <div className="relative mt-[5px] block md:flex gap-[25px] w-full ">
+                <div className=" ">
                   <Controller
                     control={control}
                     name="phoneNumber"
-                    render={({
-                      field: { onChange, onBlur, value, name, ref },
-                      fieldState: { error },
-                    }) => (
+                    render={({ field }) => (
                       <PhoneInput
                         country={"us"}
-                        value={value}
-                        className={
-                          value && error === undefined
-                            ? "is-valid w-full "
-                            : error
-                              ? "has-error w-full "
-                              : value && "is-valid w-full "
-                        }
                         placeholder="Phone Number"
-                        onChange={onChange}
+                        {...field}
+                        inputClass="!w-full"
                       />
                     )}
                   />

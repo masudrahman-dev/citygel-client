@@ -16,7 +16,7 @@ const SelectLanguage = () => {
 
   const selectLocation = watch("language");
 
-  console.log("selectedLanguage :>> ", selectLocation);
+  // console.log("selectedLanguage :>> ", selectLocation);
 
   const formatOptionLabel = ({ value, label, flag }) => (
     <div className="flex items-center justify-between  gap-2">

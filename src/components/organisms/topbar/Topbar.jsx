@@ -26,8 +26,8 @@ export default function Topbar({ ...props }) {
   };
 
   return (
-    <div {...props} className={cn("border")}>
-      <div className="mr-auto pl-24 pr-24 pb-3 ">
+    <div {...props} className={cn("")}>
+      <div>
         <div className="mx-auto  flex w-full  items-center justify-between py-3">
           <Logo />
           <div className="flex w-full flex-wrap items-center justify-end gap-6 ">

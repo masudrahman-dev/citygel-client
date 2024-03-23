@@ -11,13 +11,16 @@ module.exports = {
       colors: {
         cgBlue: {
           DEFAULT: "#0B90AF",
+          deep: "#003E4C",
         },
         cgGray: {
           DEFAULT: "#D9D9D933",
         },
         cgWhite: {
           DEFAULT: "#FFFFFF",
-          deep: "#003E4C",
+        },
+        cgRed: {
+          DEFAULT: "#FA0037",
         },
 
         gray: {

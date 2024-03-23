@@ -1,7 +1,5 @@
 import React, { useContext, useState } from "react";
 import { Helmet } from "react-helmet";
-import PhoneInput from "react-phone-input-2";
-import "react-phone-input-2/lib/style.css";
 import {
   Text,
   Img,
@@ -15,7 +13,6 @@ import Header1 from "../../components/Header1";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Controller, useForm } from "react-hook-form";
 import { SignUpFormValidationSchemas } from "./SignUpFormValidationSchemas";
-import PinInputfunc from "components/PinInput";
 import PinInput from "react-pin-input";
 import SocialLogin from "components/SocialLogin/SocialLogin";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -30,6 +27,7 @@ import Loading from "components/Loading/Loading";
 import { toast } from "react-toastify";
 import AuthContext from "context/AuthContext";
 import { jwtDecode } from "jwt-decode";
+import NextNumberInput from "components/next-number-input/NextNumberInput";
 
 export default function SignUpPage() {
   const {
@@ -124,6 +122,7 @@ export default function SignUpPage() {
       }
     } catch (error) {}
   };
+
   return (
     <>
       <Helmet>
@@ -196,48 +195,8 @@ export default function SignUpPage() {
                     </Text>
                   )}
                 </div>
-                <Text
-                  as="p"
-                  className="mt-8 ml-1.5 !text-black-900_99 opacity-0.7"
-                >
-                  Enter Your Phone number
-                </Text>
-                <div className="relative mt-[5px] block md:flex gap-[25px] w-full ">
-                  <Controller
-                    control={control}
-                    name="phoneNumber"
-                    render={({
-                      field: { onChange, onBlur, value, name, ref },
-                      fieldState: { error },
-                    }) => (
-                      <PhoneInput
-                        country={"us"}
-                        value={value}
-                        className={
-                          value && error === undefined
-                            ? "is-valid w-full "
-                            : error
-                              ? "has-error w-full "
-                              : value && "is-valid w-full "
-                        }
-                        placeholder="Phone Number"
-                        onChange={onChange}
-                      />
-                    )}
-                  />
 
-                  {errors.phoneNumber?.message && (
-                    <Text
-                      className="xs absolute bottom-[-20px] text-[#ef4c4c] "
-                      fontSize="xs"
-                      bottom="-19px"
-                      position="absolute"
-                      color="#E85A2D"
-                    >
-                      <>Please enter valid phone number</>
-                    </Text>
-                  )}
-                </div>
+                <NextNumberInput />
                 <Text
                   as="p"
                   className="mt-[40px] ml-1.5 !text-black-900_99 opacity-0.7"

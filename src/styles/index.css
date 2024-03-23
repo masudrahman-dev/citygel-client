@@ -35,6 +35,8 @@ ul {
   background: #6b6b6b;
   border-radius: 10px;
 }
+
+
 input {
   background-color: transparent;
   width: 100%;
@@ -86,87 +88,4 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 cursor: pointer;
 
 }
-/* .gray_50_02_red_A400_border::before {
-  content: '';
-  position: absolute;
-  top: -20px;
-  left: -20px;
-  right: -20px;
-  bottom: -20px;
-  z-index: -1;
-  background: linear-gradient(135deg, #fafafa, #f90e3a);
-  border-radius: 20px; /* Same border radius as the main element */
 
-.has-error{
-  border: 1px solid red;
-}
-.is-valid{
-  border: 1px solid #0B90AF;
-}
-.react-tel-input .flag-dropdown {
-  position: absolute;
-  top: 6px;
-  bottom: 0;
-  padding: 5px;
-  background-color: #fbfbfb;
-  border: 1px solid #f4f4f4;
-  height: 71px;
-  margin-left: 2px;
-
-}
-button{
-  cursor: pointer !important;
-}
-.react-tel-input .selected-flag {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  padding: 5px;
-  background-color: #fbfbfb;
-  border: 1px solid #f4f4f4;
-  border-radius: 19px 0 0 19px;
-}
-.react-tel-input {
-  border-radius: 15px;
-  line-height: 25px;
-  height: 82px;
-  width: 436px;
-}
-.react-tel-input .form-control {
-  border-radius: 15px;
-  line-height: 30px;
-background-color: #F3F3F3 !important;
-  border: 1px solid #0B90AF;
-
-  border-radius: 15px;
-  line-height: 30px;
-  height: 80px;
-  width: 434px;
-}
-/* .head{
-  background-image: url('images/header.webp');
-} */
-.pincode-input-text {
-
-  width: 65px !important;
-  height: 65px !important;
-}
-.pincode-input-container{
-  padding: 0px !important;
-}
-.react-tel-input .flag-dropdown {
-  padding: 10px !important;
-
-  border-radius: 50px 0 0 50px !important;
-}
-.form-control {
-  padding-left: 56px !important;
-}
-
-.slick-dots{
-  bottom: 24px !important;
-}
-a {
- 
-  text-decoration: unset;
-}
