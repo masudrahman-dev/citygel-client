@@ -378,7 +378,7 @@ export default function Confirm() {
                   <button
                     type="submit"
                     style={{ backgroundColor: "#0B90AF" }}
-                    className="w-[430px] h-[80px] rounded-[15px] mt-7 text-white-A700 font-poppins font-normal text-[24px]"
+                    className="w-full h-[80px] rounded-[15px] mt-7 text-white-A700 font-poppins font-normal text-[24px]"
                   >
                     Create Account
                   </button>

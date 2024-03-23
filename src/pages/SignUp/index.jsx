@@ -28,6 +28,7 @@ import { toast } from "react-toastify";
 import AuthContext from "context/AuthContext";
 import { jwtDecode } from "jwt-decode";
 import NextNumberInput from "components/next-number-input/NextNumberInput";
+import OtpInput from "components/otp-input/OtpInput";
 
 export default function SignUpPage() {
   const {
@@ -240,53 +241,9 @@ export default function SignUpPage() {
                     </Text>
                   )}
                 </div>
+                <OtpInput />
 
-                <div className="relative mt-9">
-                  <Controller
-                    name="code"
-                    control={control}
-                    defaultValue=""
-                    render={({
-                      field: { onChange, onBlur, value, name, ref },
-                      fieldState: { error },
-                    }) => (
-                      <div>
-                        <PinInput
-                          length={6}
-                          initialValue=""
-                          value={value}
-                          onChange={onChange}
-                          type="numeric"
-                          inputMode="number"
-                          style={{ padding: "15px", paddingLeft: "40px" }}
-                          inputStyle={{
-                            borderColor: "transparent",
-                            backgroundColor: "rgba(217, 217, 217, 0.21)",
-
-                            borderRadius: "10px",
-                          }}
-                          inputFocusStyle={{ borderColor: "#0B90AF" }}
-                          onComplete={(value, index) => {}}
-                          autoSelect={true}
-                          regexCriteria={/^[ A-Za-z0-9_@./#&+-]*$/}
-                        />
-                      </div>
-                    )}
-                  />
-                  {errors.code?.message && (
-                    <Text
-                      className="xs absolute bottom-[-20px] text-[#ef4c4c] "
-                      fontSize="xs"
-                      bottom="-19px"
-                      position="absolute"
-                      color="#E85A2D"
-                    >
-                      <>Please enter valid Code</>
-                    </Text>
-                  )}
-                </div>
-
-                <div className="flex flex-row justify-start w-full mt-[20px] mx-auto max-w-[490px]">
+                <div className="flex flex-row justify-start w-full mt-[20px] ">
                   <div className="flex flex-col items-start justify-start w-full gap-3">
                     <div className="relative mb-3">
                       <CheckBox
@@ -296,9 +253,9 @@ export default function SignUpPage() {
                         label={
                           <span>
                             I am accepting all
-                            <span style={{ color: "#00e4e4" }}> Terms</span>
+                            <span className="text-cgBlue"> Terms</span>
                             <span> &amp; </span>
-                            <span style={{ color: "#00e4e4" }}>Conditions</span>
+                            <span className="text-cgBlue">Conditions</span>
                           </span>
                         }
                         className="gap-2.5 text-left rounded-md text-[13px]"
@@ -327,8 +284,7 @@ export default function SignUpPage() {
                 <div>
                   <button
                     type="submit"
-                    style={{ backgroundColor: "#0B90AF" }}
-                    className="w-[430px] h-[80px] rounded-[15px] mt-7 text-white-A700 font-poppins font-normal text-[24px]"
+                    className="w-[600px] cursor-pointer bg-cgBlue h-[80px] rounded-[15px] mt-7 text-white-A700 font-poppins font-normal text-[24px]"
                   >
                     Create Account
                   </button>

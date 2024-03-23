@@ -89,3 +89,20 @@ cursor: pointer;
 
 }
 
+
+.has-error{
+  border: 1px solid red;
+}
+.is-valid{
+  border: 1px solid #0B90AF;
+}
+
+
+
+.slick-dots{
+  bottom: 24px !important;
+}
+a {
+ 
+  text-decoration: unset;
+}
