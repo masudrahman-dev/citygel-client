@@ -98,10 +98,5 @@ const ProjectRoutes = () => {
   return element;
 };
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <div>Hello world!</div>,
-  },
-]);
+
 export default ProjectRoutes;

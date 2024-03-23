@@ -13,13 +13,13 @@ import { StripeCardNumberElement } from "@stripe/stripe-js";
 import { useState } from "react";
 import useAxios from "config/api/useAxios";
 import { useAuthState } from "react-firebase-hooks/auth";
-import auth from "firebase.init";
+import auth from "config/firebase.init";
 import { message } from "antd";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 const PostAddPayment = () => {
   const { currentStep, category, subcategory, form, membership } = useSelector(
-    (state) => state.post,
+    (state) => state.post
   );
   const [loading, setLoading] = useState(false);
   console.log(form);

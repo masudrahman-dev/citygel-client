@@ -16,8 +16,7 @@ export default function HomePage() {
         />
       </Helmet>
 
-      <Topbar />
-      {/* <Header1 className="flex w-full flex-row items-center justify-between pb-4" /> */}
+      <Header1 className="flex w-full flex-row items-center justify-between mb-20" />
       <div className="mt-[-10px] flex w-full flex-row justify-center bg-gray-50">
         <div className="flex w-full flex-col items-center justify-start ">
           <div className="relative h-[800px] w-full sm:h-[381px] mq750:h-[381px] mq450:h-[381px] ">
@@ -33,7 +32,7 @@ export default function HomePage() {
                   <div className="absolute right-0 top-0 m-auto flex w-[94%] flex-col items-center justify-start">
                     <div className="flex w-full flex-col items-end justify-start">
                       <div className="flex w-full flex-col items-end justify-start gap-[18px]"></div>
-                      <div className="z-[1] mt-[-118px] mr-[189px] h-[364px] w-[364px] rounded-[50%] bg-light_blue-400 blur-[430.00px] backdrop-opacity-[0.5]" />
+                      {/* <div className="z-[1] mt-[-118px] mr-[189px] h-[364px] w-[364px] rounded-[50%] bg-light_blue-400 blur-[430.00px] backdrop-opacity-[0.5]" /> */}
                       {/* <div className="h-[364px] w-[364px] mt-[-118px] mr-[189px] z-[1] bg-light_blue-400 backdrop-opacity-[0.5] blur-[430.00px] rounded-[50%]" /> */}
                     </div>
                     <div className="z-[1] mt-[-132px] flex w-full flex-col items-center justify-start ">

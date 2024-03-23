@@ -23,7 +23,7 @@ import {
   useAuthState,
   useCreateUserWithEmailAndPassword,
 } from "react-firebase-hooks/auth/dist/index.cjs";
-import auth from "firebase.init";
+import auth from "config/firebase.init";
 import { password } from "config/password";
 import axios from "axios";
 import { ConfirmValidation } from "./ConfirmValidation";
@@ -53,7 +53,7 @@ export default function Confirm() {
   const fetchUser = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/v1/users/${user?.email}`,
+        `http://localhost:5000/api/v1/users/${user?.email}`
       );
       if (response.data) {
         navigate(from);
@@ -79,7 +79,7 @@ export default function Confirm() {
             marketing: e.marketing,
             fullName: e.fullName,
             terms: true,
-          },
+          }
         );
         console.log(response.data);
         if (response.data) {

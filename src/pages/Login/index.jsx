@@ -19,7 +19,7 @@ import {
   useAuthState,
   useSignInWithEmailAndPassword,
 } from "react-firebase-hooks/auth";
-import auth from "firebase.init";
+import auth from "config/firebase.init";
 import { password } from "config/password";
 export default function LoginPage() {
   const {
@@ -61,7 +61,7 @@ export default function LoginPage() {
         {
           email: e.email,
           code: e.code,
-        },
+        }
       );
       if (response.data) {
         const firebaseSignin = signInWithEmailAndPassword(e.email, password);
@@ -97,7 +97,7 @@ export default function LoginPage() {
           `http://localhost:5000/api/v1/auth/send-code`,
           {
             email: email,
-          },
+          }
         );
         if (response.data) {
           toast.success("Otp code sent into your email");

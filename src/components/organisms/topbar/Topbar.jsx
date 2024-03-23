@@ -2,7 +2,7 @@ import { Text } from "components";
 import Logo from "components/icons/logo/Logo";
 import SelectLanguage from "components/select-location/SelectLocation";
 import AuthContext from "context/AuthContext";
-import auth from "firebase.init";
+import auth from "config/firebase.init";
 import { signOut } from "firebase/auth";
 import { useContext } from "react";
 import { useAuthState } from "react-firebase-hooks/auth/dist/index.cjs";
@@ -24,9 +24,9 @@ export default function Topbar({ ...props }) {
       console.error("Error signing out:", error.message);
     }
   };
-  console.log(user);
+
   return (
-    <div {...props} className={cn("h-[128px] w-[1920px] border bg-cgBlue")}>
+    <div {...props} className={cn("border")}>
       <div className="mr-auto pl-24 pr-24 pb-3 ">
         <div className="mx-auto  flex w-full  items-center justify-between py-3">
           <Logo />

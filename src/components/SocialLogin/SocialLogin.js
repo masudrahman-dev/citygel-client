@@ -4,7 +4,7 @@ import axios from "axios";
 import { GoogleAuthProvider, signInWithPopup, signOut } from "firebase/auth";
 import { Img } from "components";
 import Loading from "components/Loading/Loading";
-import auth from "firebase.init";
+import auth from "config/firebase.init";
 import { Navigate, useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import AuthContext from "context/AuthContext";
@@ -34,7 +34,7 @@ const SocialLogin = () => {
 
       // Check if the user's email already exists
       const response = await axios.get(
-        `http://localhost:5000/api/v1/users/${email}`,
+        `http://localhost:5000/api/v1/users/${email}`
       );
       setLoading(false);
       if (response.data) {
@@ -42,7 +42,7 @@ const SocialLogin = () => {
           `http://localhost:5000/api/v1/auth/google-auth`,
           {
             email: email,
-          },
+          }
         );
         if (response.data) {
           setLoading(false);

@@ -6,8 +6,8 @@ module.exports = {
   ],
   darkMode: "class",
   theme: {
-    screens: { md: { max: "1050px" }, sm: { max: "650px" } },
     extend: {
+      screens: { md: { max: "1050px" }, sm: { max: "650px" } },
       colors: {
         cgBlue: {
           DEFAULT: "#0B90AF",
@@ -17,6 +17,7 @@ module.exports = {
         },
         cgWhite: {
           DEFAULT: "#FFFFFF",
+          deep: "#003E4C",
         },
 
         gray: {
@@ -61,26 +62,7 @@ module.exports = {
         red: "rgba(255, 0, 0, 0.1)",
         "main-color1": "#01111d",
         lawngreen: "#2ddf00",
-        white: {
-          A700: "#ffffff",
-          A700_63: "#ffffff63",
-          A700_a2: "#ffffffa2",
-          A700_99: "#ffffff99",
-        },
-        gray: {
-          50: "#f9f9f9",
-          800: "#4d4d4d",
-          900: "#212121",
-          "100_01": "#f6f7f9",
-          "200_01": "#e7e7e7",
-          "50_01": "#f8f8f8",
-        },
-        red: {
-          500: "#ff3838",
-          A400_01: "#fa0037",
-          A700_7e: "#ff00007e",
-          A700: "#ff0000",
-        },
+
         light_blue: { 400: "#20c5f2" },
         blue_gray: {
           "100_01": "#d3d3d3",
@@ -89,21 +71,11 @@ module.exports = {
           "100_33": "#d9d9d933",
           "100_03": "#d9d9d9",
         },
-        black: {
-          "900_87": "#00000087",
-          "900_99": "#00000099",
-          "900_03": "#000000",
-          "900_7e": "#0000007e",
-          "900_75": "#00000075",
-          "900_6f": "#0000006f",
-          "900_33": "#00000033",
-          "900_90_01": "#00000090",
-        },
+
         cyan: { 700: "#0c92b2", "700_01": "#0b90af" },
         teal: { 900: "#003d4c" },
         gray_500: "#9e9e9e",
       },
-      spacing: {},
       fontFamily: {
         poppins: "Poppins",
         aleo: "Aleo",
@@ -111,49 +83,8 @@ module.exports = {
         lato: "Lato",
         comfortaa: "Comfortaa",
       },
-      borderRadius: {
-        "31xl": "50px",
-        xl: "20px",
-        "3xs": "10px",
-        "61xl": "80px",
-        "21xl": "40px",
-        mini: "15px",
-        "12xs": "1px",
-        "10xl-9": "29.9px",
-        "8xl-6": "27.6px",
-        "11xl": "30px",
-        "7xs-3": "5.3px",
-        "9xs": "4px",
-        "10xs": "3px",
-        "76xl": "95px",
-        "7xl": "26px",
-        "mid-5": "17.5px",
-        "4xs-8": "8.8px",
-      },
-      boxShadow: {
-        xs: "0px 0px  3px 0px #00000019",
-        sm: "0px 0px  10px 0px #00000026",
-      },
-      backgroundImage: {
-        gradient: "linear-gradient(135deg, #0b90af,#20c5f2)",
-        gradient1: "linear-gradient(90deg, #fcb100,#ed893e)",
-      },
-      fontFamily: {
-        poppins: "Poppins",
-        aleo: "Aleo",
-        inter: "Inter",
-        publicsans: "Public Sans",
-      },
-      opacity: {
-        0.5: 0.5,
-        0.3: 0.3,
-        0.1: 0.1,
-        0.7: 0.7,
-        0.4: 0.4,
-        0.2: 0.2,
-        0.8: 0.8,
-      },
     },
+
     fontSize: {
       xl: "20px",
       base: "16px",
@@ -186,37 +117,6 @@ module.exports = {
       "base-8": "15.8px",
       inherit: "inherit",
     },
-
-    screens: {
-      sm: { min: "100px", max: "767px" },
-      md: { min: "768px", max: "1023px" },
-      lg: { min: "1024px", max: "1279px" },
-      mq1500: {
-        raw: "screen and (max-width: 1500px)",
-      },
-      mq1325: {
-        raw: "screen and (max-width: 1325px)",
-      },
-      mq1125: {
-        raw: "screen and (max-width: 1125px)",
-      },
-      mq1050: {
-        raw: "screen and (max-width: 1050px)",
-      },
-      mq825: {
-        raw: "screen and (max-width: 825px)",
-      },
-      mq800: {
-        raw: "screen and (max-width: 800px)",
-      },
-      mq750: {
-        raw: "screen and (max-width: 750px)",
-      },
-      mq450: {
-        raw: "screen and (max-width: 450px)",
-      },
-    },
-    // Other Tailwind CSS configurations...
   },
   plugins: [require("@tailwindcss/forms")],
   corePlugins: {

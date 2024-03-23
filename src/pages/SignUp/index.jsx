@@ -23,7 +23,7 @@ import {
   useAuthState,
   useCreateUserWithEmailAndPassword,
 } from "react-firebase-hooks/auth/dist/index.cjs";
-import auth from "firebase.init";
+import auth from "config/firebase.init";
 import { password } from "config/password";
 import axios from "axios";
 import Loading from "components/Loading/Loading";
@@ -67,7 +67,7 @@ export default function SignUpPage() {
         {
           email: e.email,
           code: e.code,
-        },
+        }
       );
       if (Verifyresponse.data) {
         const response = await axios.post(
@@ -76,11 +76,11 @@ export default function SignUpPage() {
             fullName: e.fullName,
             email: e.email,
             phoneNumber: e.phoneNumber,
-          },
+          }
         );
         const createUser = await createUserWithEmailAndPassword(
           e.email,
-          password,
+          password
         );
         setLoading(false);
         if (response.data && createUser) {
@@ -114,7 +114,7 @@ export default function SignUpPage() {
           `http://localhost:5000/api/v1/auth/send-code`,
           {
             email: email,
-          },
+          }
         );
         if (response.data) {
           toast.success("Otp code sent into your email");
