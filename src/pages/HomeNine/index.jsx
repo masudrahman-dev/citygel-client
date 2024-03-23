@@ -77,8 +77,8 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-          <div className="relative container mx w-[100%] grid grid-cols-4 md:grid-cols-2 mq450:grid-cols-1 mq750:grid-cols-1 gap-5 items-start mt-[-160px] sm:mt-[5px] mq450:mt-[5px] mq750:mt-[5px]">
-            <div className="flex flex-row justify-center w-[90%]  h-[214px]  px-14 py-[84px] m-auto border-[3px] border-solid gray_50_02_red_A400_border bg-white-A700 shadow-sm  rounded-[20px]">
+          <div className="relative w-[95%] sm:w-full grid grid-cols-4 md:grid-cols-2 mq450:grid-cols-1 mq750:grid-cols-2 sm:grid-cols-2 gap-5 items-start mt-[-160px] sm:mt-[5px] mq450:mt-[5px] mq750:mt-[5px]">
+            <div className="flex flex-row justify-center w-[90%]  h-[214px]  px-20 py-[84px] m-auto border-[3px] border-solid gray_50_02_red_A400_border bg-white-A700 shadow-sm  rounded-[20px]">
               <Text
                 size="7xl"
                 as="p"

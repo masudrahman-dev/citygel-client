@@ -31,7 +31,7 @@ const AddPostWrapper = () => {
 
   return (
     <div className="overflow-hidden">
-      <div className="overflow-hidden">
+      <div className="">
         <header className=" bg-gradient-to-r from-[rgb(16,56,76)] to-[rgb(21,60,77)] w-screen h-[100px] mq800:h-[80px] flex justify-between absolute z-30 overflow-hidden">
           <div className="flex justify-start mq550:justify-between items-center
           
