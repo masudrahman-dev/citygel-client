@@ -1,8 +1,7 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 import Select from "react-select";
 import { useForm, Controller } from "react-hook-form";
 import { languageOptions } from "./data";
-import "./SelectLanguage.css";
 const SelectLanguage = () => {
   const {
     control,
@@ -15,12 +14,12 @@ const SelectLanguage = () => {
     console.log("data:", data);
   };
 
-  const selectedLanguage = watch("language");
+  const selectLocation = watch("language");
 
-  console.log("selectedLanguage :>> ", selectedLanguage);
+  console.log("selectedLanguage :>> ", selectLocation);
 
   const formatOptionLabel = ({ value, label, flag }) => (
-    <div className="flex items-center justify-between  gap-1">
+    <div className="flex items-center justify-between  gap-2">
       <img src={flag} alt={label} />
       <p className="  text-base">{label}</p>
     </div>

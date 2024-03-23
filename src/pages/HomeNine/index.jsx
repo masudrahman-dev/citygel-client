@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 import { Text, Img, Heading, Button } from "../../components";
 import Footer from "../../components/Footer";
 import Header1 from "components/Header1";
+import Topbar from "components/organisms/topbar/Topbar";
 
 export default function HomePage() {
   return (
@@ -14,7 +15,9 @@ export default function HomePage() {
           content="Web site created using create-react-app"
         />
       </Helmet>
-      <Header1 className="flex w-full flex-row items-center justify-between pb-4" />
+
+      <Topbar />
+      {/* <Header1 className="flex w-full flex-row items-center justify-between pb-4" /> */}
       <div className="mt-[-10px] flex w-full flex-row justify-center bg-gray-50">
         <div className="flex w-full flex-col items-center justify-start ">
           <div className="relative h-[800px] w-full sm:h-[381px] mq750:h-[381px] mq450:h-[381px] ">

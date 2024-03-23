@@ -1,14 +1,12 @@
 import React from "react";
+import { createBrowserRouter, BrowserRouter } from "react-router-dom";
 import { useRoutes } from "react-router-dom";
-import Home from "pages/Home";
 import NotFound from "pages/NotFound";
 import LoginThree from "pages/Login";
-import PostAdEleven from "pages/AddPost/PostCategories";
-import PostAdTwo from "pages/PostAdTwo";
 import SignUpPage from "pages/SignUp";
 import HomePage from "pages/HomeNine";
-import Products from "./pages/Products/index";
-import CategoriesPage from "./pages/Categories/index";
+import Products from "../pages/Products/index";
+import CategoriesPage from "../pages/Categories/index";
 import Description from "components/ai-5pages/Description";
 import PostAd from "pages/AddPost/PostFormAd";
 import PostAd1 from "pages/AddPost/PostMembershipPlan";
@@ -23,7 +21,7 @@ import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 
 const stripePromise = loadStripe(
-  "pk_test_51Ov1cySAeHvI9y2yJ0rfiQdS8DRrkSp9KIhsATonDEL2Yv1w1qKxtuP8NbRxYAUayN3GFilUu6ZRWXXuUp7LdZ2700PaqkmH4c",
+  "pk_test_51Ov1cySAeHvI9y2yJ0rfiQdS8DRrkSp9KIhsATonDEL2Yv1w1qKxtuP8NbRxYAUayN3GFilUu6ZRWXXuUp7LdZ2700PaqkmH4c"
 );
 
 const ProjectRoutes = () => {
@@ -100,4 +98,10 @@ const ProjectRoutes = () => {
   return element;
 };
 
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <div>Hello world!</div>,
+  },
+]);
 export default ProjectRoutes;

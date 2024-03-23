@@ -5,7 +5,8 @@ import auth from "firebase.init";
 import { useNavigate } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import AuthContext from "context/AuthContext";
-import SelectLanguage from "./select-language/SelectLanguage";
+import SelectLanguage from "components/select-location/SelectLocation";
+import cn from "utils/cn";
 
 export default function Header1({ ...props }) {
   const navigate = useNavigate();
@@ -24,45 +25,10 @@ export default function Header1({ ...props }) {
   };
   console.log(user);
   return (
-    <header
-      {...props}
-      className={` w-full h-200 head bg-[url(images/header.webp)]`}
-    >
-      <div className="pl-24 pr-24 mr-auto pb-3 ">
-        <div className="flex  justify-between items-center w-full py-3 mx-auto max-w-[1427px]">
-          <Img
-            src="images/img_citygel_2_white.png"
-            alt="citygel2white"
-            className="w-[15%] object-cover"
-          />
-          <div className="w-full flex gap-6 flex-wrap items-center justify-end ">
-            {user?.uid && tuser ? (
-              <div onClick={handleSignOut}>
-                <Text
-                  size="2xl"
-                  as="p"
-                  className=" cursor-pointer font-poppins !text-gray-50 text-center"
-                >
-                  Sign Out
-                </Text>
-              </div>
-            ) : (
-              <div onClick={() => navigate("/login")}>
-                <Text
-                  size="2xl"
-                  as="p"
-                  className="cursor-pointer font-poppins !text-gray-50 text-center"
-                >
-                  Login or Sign up
-                </Text>
-              </div>
-            )}
-            {/* me */}
-            <SelectLanguage />
-          </div>
-        </div>
-        <div className="flex flex-row justify-between items-center w-full mb-2 mt-8 mx-auto max-w-[1685px] ">
-          <div className="flex flex-row justify-between w-auto gap-[70px]">
+    <header {...props} className={cn("")}>
+      <div className="mr-auto pl-24 pr-24 pb-3 ">
+        <div className="mx-auto mb-2 mt-8 flex w-full max-w-[1685px] flex-row items-center justify-between ">
+          <div className="flex w-auto flex-row justify-between gap-[70px]">
             <a href="#">
               <Text size="2xl" as="p">
                 Real Estate
@@ -84,7 +50,7 @@ export default function Header1({ ...props }) {
             color="red_A400_01"
             size="4xl"
             variant="fill"
-            className="font-aleo font-bold min-w-[210px]"
+            className="min-w-[210px] font-aleo font-bold"
           >
             Post an ad
           </Button>
