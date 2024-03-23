@@ -9,6 +9,16 @@ module.exports = {
     screens: { md: { max: "1050px" }, sm: { max: "650px" } },
     extend: {
       colors: {
+        cgBlue: {
+          DEFAULT: "#0B90AF",
+        },
+        cgGray: {
+          DEFAULT: "#D9D9D933",
+        },
+        cgWhite: {
+          DEFAULT: "#FFFFFF",
+        },
+
         gray: {
           100: "#fbfbfb",
           200: "#fafafa",

@@ -1,13 +1,94 @@
-import { Img, Text } from "components";
-import React from "react";
-
+import React, { useRef, useState } from "react";
+import Select from "react-select";
+import { useForm, Controller } from "react-hook-form";
+import { languageOptions } from "./data";
+import "./SelectLanguage.css";
 const SelectLanguage = () => {
-  return (
-    <div className="flex items-center gap-3 rounded-lg  bg-black-900_87 p-3  text-white-A700 text-red-200">
-      <div>icon |</div>
+  const {
+    control,
+    handleSubmit,
+    formState: { errors },
+    watch,
+  } = useForm();
 
-      <div>Change Location</div>
+  const onSubmit = (data) => {
+    console.log("data:", data);
+  };
+
+  const selectedLanguage = watch("language");
+
+  console.log("selectedLanguage :>> ", selectedLanguage);
+
+  const formatOptionLabel = ({ value, label, flag }) => (
+    <div className="flex items-center justify-between  gap-1">
+      <img src={flag} alt={label} />
+      <p className="  text-base">{label}</p>
     </div>
+  );
+  return (
+    <>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <Controller
+          name="language"
+          control={control}
+          defaultValue={languageOptions[0]}
+          render={({ field }) => (
+            <Select
+              {...field}
+              classNamePrefix="select"
+              isSearchable={true}
+              options={languageOptions}
+              formatOptionLabel={formatOptionLabel}
+              styles={{
+                control: (provided, state) => ({
+                  ...provided,
+                  width: 180,
+                  height: 50,
+                  borderRadius: "9999px",
+                  backgroundColor: "transparent",
+                  borderColor: "white",
+                  "&:focus": { outline: "none" },
+                  "&:hover": { backgroundColor: "transparent" },
+                }),
+
+                option: (provided, state) => ({
+                  ...provided,
+                  display: "flex",
+                  alignItems: "center",
+                  borderRadius: "3px",
+                  backgroundColor: state.isSelected ? "#0B90AF" : "",
+                  color: state.isSelected ? "white" : "",
+                }),
+
+                singleValue: (base, state) => ({
+                  ...base,
+                  color: "white",
+                }),
+                menuList: (base, state) => ({
+                  ...base,
+                  padding: "0px",
+                }),
+
+                clearIndicator: (provided, state) => ({
+                  ...provided,
+                  display: "none",
+                }),
+
+                dropdownIndicator: (provided, state) => ({
+                  ...provided,
+                  color: "#FFFFFF",
+                }),
+
+                indicatorSeparator: (provided, state) => ({
+                  ...provided,
+                  display: "none",
+                }),
+              }}
+            />
+          )}
+        />
+      </form>
+    </>
   );
 };
 

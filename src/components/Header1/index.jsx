@@ -61,7 +61,7 @@ export default function Header1({ ...props }) {
             <SelectLanguage />
           </div>
         </div>
-        <div className="flex flex-row justify-between items-center w-full mb-2 mt-8 mx-auto max-w-[1685px]">
+        <div className="flex flex-row justify-between items-center w-full mb-2 mt-8 mx-auto max-w-[1685px] ">
           <div className="flex flex-row justify-between w-auto gap-[70px]">
             <a href="#">
               <Text size="2xl" as="p">
