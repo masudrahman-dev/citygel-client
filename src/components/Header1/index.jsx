@@ -29,7 +29,7 @@ export default function Header1({ ...props }) {
   return (
     <header
       {...props}
-      className={cn(" h-[206px] px-[110px]  w-[1920px]  bg-cgBlue-deep")}
+      className={cn(" h-[206px] px-[110px]  lg:w-[1920px]  bg-cgBlue-deep")}
     >
       <Topbar />
 

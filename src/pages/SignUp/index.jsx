@@ -147,7 +147,7 @@ export default function SignUpPage() {
               </div>
             </div>
           </div>
-          <div className="mt-[9px] z-[1] w-[1800px]">
+          <div className="mt-[9px] z-[1] lg:w-[1800px]">
             <Text
               size="8xl"
               as="p"
